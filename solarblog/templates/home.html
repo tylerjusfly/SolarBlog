@@ -1,0 +1,17 @@
+{% extends "inherit.html" %}
+
+{% block content %}
+   <h1> Trouble Some 96 </h1>
+   <form action = "/" METHOD="POST">
+      <textarea rows ="5" col ="30"  name ="content" >
+		</textarea>
+     <input type = "submit" value = "add post" class = "btn btn-secondary">
+    </form>
+    
+    </br> </br>
+    {% for post in posts %}
+     <h1>   {{post.content}} </h1>
+     
+      
+      {%endfor%}
+{% endblock content %}
